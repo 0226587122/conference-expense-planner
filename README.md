@@ -1,58 +1,74 @@
-# Conference Expense Planner (React + Vite + Tailwind)
+# Conference Event Planner
 
-A practice project that estimates conference costs (rooms, AV add-ons, meals) with a live total and a four‑column “Show Details” summary.
+A React application for planning conference events and managing expenses.
 
 ## Features
-- Landing page with hero + CTA
-- Product selection page with sections for **Rooms**, **Add-ons**, **Meals**
-- Increment/decrement counters for rooms & add-ons; text entry for meal headcounts
-- Live subtotal, GST, and total
-- **Show Details** modal with a 4‑column table (Selection | Unit Cost | Quantity | Subtotal) and **Total**
-- CSV export of the summary
 
-## Tech
-- React 18, React Router 6, Vite
-- Tailwind CSS 3
+- Interactive event planning interface
+- Budget management tools
+- Venue selection functionality
+- Responsive design
 
-## Prerequisites
-- Node.js 18+ and npm
+## Getting Started
 
-## Setup (one-time)
-```bash
-npm install
-```
+### Prerequisites
 
-## Run in dev
+- Node.js (v14 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+2. Navigate to the project directory:
+   ```bash
+   cd conference_event_planner
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Running the Application
+
+To start the development server:
 ```bash
 npm run dev
 ```
-Open the printed local URL (usually http://localhost:5173).
 
-## Build for production
-```bash
-npm run build
-npm run preview
+The application will run on `http://localhost:4137`.
+
+### Project Structure
+
+```
+src/
+├── App.jsx          # Main application component
+├── App.css          # Main styling file
+├── ConferenceEvent.jsx  # Event planning component
+├── AboutUs.jsx      # About us section component
+└── index.js         # Entry point
 ```
 
-## Project structure
-```
-.
-├── index.html
-├── package.json
-├── postcss.config.js
-├── tailwind.config.js
-├── vite.config.js
-├── src
-│   ├── App.jsx
-│   ├── index.css
-│   ├── main.jsx
-│   └── pages
-│       ├── LandingPage.jsx
-│       └── ProductSelectionPage.jsx
-└── README.md
-```
+## Components
 
-## Customization tips
-- Replace the landing background image in `LandingPage.jsx` (search for `backgroundImage`).
-- Change prices or product lists in `ProductSelectionPage.jsx`: the arrays `ROOMS`, `ADDONS`, `MEALS`.
-- Adjust GST by editing `taxRate` in `ProductSelectionPage.jsx`.
+### App Component
+The main application component that manages the overall state and renders other components.
+
+### ConferenceEvent Component
+Handles event planning functionality including:
+- Venue selection
+- Budget management
+- Event details input
+
+### AboutUs Component
+Displays information about the company or service.
+
+## Available Scripts
+
+- `npm run dev` - Starts the development server
+- `npm run lint` - Runs lint testing
+- `npm run build` - Builds the production version
+- `npm run preview` - Build and run the production version
+
+## Deployment
+
+The application can be deployed to any static hosting service that supports React applications.
